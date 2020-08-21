@@ -8,6 +8,7 @@ export const HeaderTile = props => (
         position: props.position,
         top: 0,
         minWidth: '100%',
+        backgroundColor: 'white',
         ul: {
           display: 'flex',
           flexDirection: 'row',
@@ -32,7 +33,7 @@ export const HeaderTile = props => (
     <Navbar.Brand href="/">
       <img
         alt=""
-        src="/strawberry.png"
+        src="/ccsm.jpg"
         width="30"
         height="30"
         className="d-inline-block align-top"
