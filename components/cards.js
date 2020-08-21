@@ -49,7 +49,7 @@ export const HeaderTile = props => (
         {props.subdivisions.map((subdivision) => (
           <Nav.Link 
             className="ml-auto" 
-            href={`#${subdivision}`}
+            href={`/#${subdivision}`}
             key={subdivision}
             style={{
               color: props.sdcolor
@@ -93,6 +93,7 @@ export const InfoTiles = props => (
     sx={{
       maxWidth: '70%',
       textAlign: 'center',
+
       ul: {
         listStyle: 'none',
         p: 0,
@@ -111,7 +112,8 @@ export const InfoTiles = props => (
 
         a: {
           color: 'inherit',
-          textDecoration: 'none'
+          textDecoration: 'none',
+
         },
         
         ul: {
@@ -132,7 +134,7 @@ export const InfoTiles = props => (
       },
       h3: {
         mb: 2,
-        mt: [3, 0, 0],
+        mt: [3, 3, 0],
         lineHeight: 'heading',
         a: {
           color: 'inherit',
@@ -184,7 +186,7 @@ export const ContactTile = props => (
   />
 )
 
-export const LessonTile = props => (
+export const LessonTiles = props => (
   <Box
     {...props}
     sx={{
@@ -197,14 +199,11 @@ export const LessonTile = props => (
         display: 'grid',
         gridGap: [3, 4],
       },
-      iframe: {
-        my: [4, 4, 4],
-      },
       li: {        
         my: [4, 4, 4],
         display: 'flex',
-        flexDirection: ['column', 'column', 'row'],
-        alignItems: ['center', 'center', 'flex-start'],
+        flexDirection: ['column', 'column', 'column'],
+        alignItems: ['center', 'center', 'center'],
         justifyContent: 'stretch',
         maxWidth: '100%',
         fontSize: 2,
@@ -241,12 +240,9 @@ export const LessonTile = props => (
       },
       img: {
         display: 'block',
-        minWidth: '20em',
-        width: '20rem',
-        maxWidth: ['6rem', '20rem', '20rem'],
-        maxHeight: '10rem',
         objectFit: 'cover',
-        objectPosition: 'center'
+        objectPosition: 'center',
+        my: [3, 3, 3]
       },
       ...props.sx
     }}

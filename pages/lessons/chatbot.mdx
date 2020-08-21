@@ -1,5 +1,5 @@
-import { Container } from 'theme-ui'
-import { HeaderTile, InfoTiles, ContactTile } from '../../components/cards'
+import { Container, Image } from 'theme-ui'
+import { HeaderTile, LessonTiles, ContactTile } from '../../components/cards'
 import {FaInstagram, FaFacebook} from 'react-icons/fa'
 import {FiMail} from 'react-icons/fi'
 import Iframe from 'react-iframe'
@@ -17,10 +17,35 @@ import Iframe from 'react-iframe'
   sdcolor = "black"
 />
 
-<LessonTile
+<LessonTiles
   id="lessons"
   name="lessons"
 >
+
+## Building a Chatbot
+
+In this lesson, you'll learn how to make a chatbot using Scratch, a block-based programming language. Head over to [scratch.mit.edu](https://scratch.mit.edu) to make an and start your adventure!
+
+- ### Types of Blocks
+  - ![Block Types](/chatbot/typesnew.png)
+    There are eight types of blocks in Scratch. Each type lets you control the game in a different way. You can also make your own blocks.
+- ### First Block
+  - ![Starting a Game](/chatbot/intro.png)
+    This is an example block of Scratch. When you click on a sprite, it will say two lines, each for two seconds.
+- ### Function Blocks
+  - ![Events](/chatbot/starters.png)
+    Custom blocks called "functions" let you fit large and complex blocks of code into one small block for repeated use.
+- ### Full Game
+  - ![Tjhe Full Block](/chatbot/full.png)
+    For example, this function is named Guessing Game, and it executes code that simulates a guessing game. When you "call" the function, or use it in other blocks of code, the contents of this function are performed.
+- ### Gameflow
+  - ![The Ask Block](/chatbot/gameflow.png)
+    The "ask" block is the essence of the chatbot. It allows users to input text, or in this case, questions for the robot. As shown, if what the user inputs includes the word guessing or game, the function called Guessing Game executes. Similar logic is used for the Chat function.
+- ### If Statements
+  - ![If Block](/chatbot/ifelse.png)
+    The if statement seen is just like how English works. If and only if a condition is fulfilled, the block inside it is executed.
+
+## Final Product
 
 <Iframe url="https://scratch.mit.edu/projects/417916589/embed"
         width="485px"
@@ -30,7 +55,7 @@ import Iframe from 'react-iframe'
         display="initial"
         position="relative"/>
 
-</LessonTile>
+</LessonTiles>
 
 <ContactTile
   id="contact"
@@ -40,6 +65,8 @@ import Iframe from 'react-iframe'
 - <a><FaInstagram/></a>
 - <a><FaFacebook/></a>
 - <a><FiMail/></a>
+
+###### Built by Fragaria Webdev
 
 </ContactTile>
 

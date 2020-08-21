@@ -7,6 +7,7 @@ export const Profiles = props => (
 		sx={{
 			maxWidth: '70%',
 			textAlign: 'center',
+
 			ul: {
 				listStyle: 'none',
 				p: 0,
@@ -14,7 +15,11 @@ export const Profiles = props => (
 				display: 'grid',
 				gridTemplateColumns: ['100%', '33% 33% 33%', '33% 33% 33%'],
 				gridGap: [3, 4],
-				li: {        
+				li: {   
+					'&:hover': {
+						outlineStyle: 'double'
+					},     
+					p: 2,
 					my: [4, 4, 4],
 					display: 'flex',
 					flexDirection: 'column',
@@ -25,7 +30,8 @@ export const Profiles = props => (
 
 					a: {
 						color: 'inherit',
-						textDecoration: 'none'
+						textDecoration: 'none',
+
 					},
 					
 					ul: {
@@ -35,6 +41,9 @@ export const Profiles = props => (
 							minWidth: '100%',
 							my: [0, 0, 0],
 							display: 'inline-block',
+							'&:hover': {
+								outlineStyle: 'none'
+							},   
 						},
 						minHeight: '100%',
 						m: 0
