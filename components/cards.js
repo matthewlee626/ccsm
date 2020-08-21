@@ -1,11 +1,11 @@
 /** @jsx jsx */
-import { jsx, Box } from 'theme-ui'
+import { jsx, Box, Link } from 'theme-ui'
 import {Navbar, Nav} from 'react-bootstrap'
 
 export const HeaderTile = props => (
   <Box
       sx={{
-        position: 'absolute',
+        position: props.position,
         top: 0,
         minWidth: '100%',
         ul: {
@@ -29,7 +29,7 @@ export const HeaderTile = props => (
     <Navbar 
       expand="lg" 
     >
-    <Navbar.Brand href="">
+    <Navbar.Brand href="/">
       <img
         alt=""
         src="/strawberry.png"
@@ -178,6 +178,75 @@ export const ContactTile = props => (
             height: 4,
           }
         }
+      },
+      ...props.sx
+    }}
+  />
+)
+
+export const LessonTile = props => (
+  <Box
+    {...props}
+    sx={{
+      maxWidth: '70%',
+      textAlign: 'center',
+      ul: {
+        listStyle: 'none',
+        p: 0,
+        m: [3, 4],
+        display: 'grid',
+        gridGap: [3, 4],
+      },
+      iframe: {
+        my: [4, 4, 4],
+      },
+      li: {        
+        my: [4, 4, 4],
+        display: 'flex',
+        flexDirection: ['column', 'column', 'row'],
+        alignItems: ['center', 'center', 'flex-start'],
+        justifyContent: 'stretch',
+        maxWidth: '100%',
+        fontSize: 2,
+
+        a: {
+          color: 'inherit',
+          textDecoration: 'none'
+        },
+        
+        ul: {
+          li: {
+            my: [0, 0, 0],
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'start',
+            textAlign: 'left'
+          },
+          minHeight: '100%',
+          mx: [1, 2, 3],
+          my: 0
+        }
+      },
+      h2: {
+        margin: 4,
+      },
+      h3: {
+        mb: 2,
+        mt: [3, 0, 0],
+        lineHeight: 'heading',
+        a: {
+          color: 'inherit',
+          textDecoration: 'none'
+        }
+      },
+      img: {
+        display: 'block',
+        minWidth: '20em',
+        width: '20rem',
+        maxWidth: ['6rem', '20rem', '20rem'],
+        maxHeight: '10rem',
+        objectFit: 'cover',
+        objectPosition: 'center'
       },
       ...props.sx
     }}

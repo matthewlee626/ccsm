@@ -1,0 +1,46 @@
+import { Container } from 'theme-ui'
+import { HeaderTile, InfoTiles, ContactTile } from '../../components/cards'
+import {FaInstagram, FaFacebook} from 'react-icons/fa'
+import {FiMail} from 'react-icons/fi'
+import Iframe from 'react-iframe'
+
+<Container sx={{
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    maxWidth: '100%'
+}}>
+
+<HeaderTile 
+  title="CCSM Coding" 
+  subdivisions={["about", "lessons", "contact"]}
+  sdcolor = "black"
+/>
+
+<LessonTile
+  id="lessons"
+  name="lessons"
+>
+
+<Iframe url="https://scratch.mit.edu/projects/417916589/embed"
+        width="485px"
+        height="402px"
+        id="game"
+        className="game"
+        display="initial"
+        position="relative"/>
+
+</LessonTile>
+
+<ContactTile
+  id="contact"
+  name="contact"
+>
+
+- <a><FaInstagram/></a>
+- <a><FaFacebook/></a>
+- <a><FiMail/></a>
+
+</ContactTile>
+
+</Container>
