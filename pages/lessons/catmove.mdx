@@ -1,0 +1,86 @@
+import { Container, Image } from 'theme-ui'
+import { HeaderTile, LessonTiles, ContactTile } from '../../components/cards'
+import {FaInstagram, FaFacebook} from 'react-icons/fa'
+import {FiMail} from 'react-icons/fi'
+import Iframe from 'react-iframe'
+
+<Container sx={{
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    maxWidth: '100%'
+}}>
+
+<HeaderTile 
+  title="CCSM Coding" 
+  subdivisions={["about", "lessons", "contact"]}
+  sdcolor = "black"
+/>
+
+<LessonTiles
+  id="lessons"
+  name="lessons"
+>
+
+## Moving a Cat in Scratch
+
+In this lesson, you will learn how to move a cat on Scratch, which is a programming language for kids! 
+
+- ### General Overview
+  - ![A group of Scratch blocks joined together.](/catmove/blockstogether.png)
+    Scratch is a platform that is made easy for programming. You simply need to drag blocks from the selection menu onto your work space (the white screen in the middle), 
+    and then those blocks will execute when you want them to. You can also connect blocks with one another to make them work together! When you do connect many blocks,
+    however, keep in mind that the order is top to bottom, so in the picture, the cat would first move 10 steps, and then turn to the right 15 degrees. 
+- ### Motion Blocks
+  - ![A block that allows sprites to move 10 steps together.](/catmove/10step.png)
+    Since our goal is to move the cat, we will need blue blocks called "Motion Blocks." These blocks do what their name suggests: move the position of the cat on the screen.
+    Firstly, you can move the cat 10 steps forward with the block shown in the image.
+- ### Motion Blocks Continued
+  - ![A block that allows sprites to turn left or right.](/catmove/15deg.png)
+    Another command you can use to move the cat is the "turn" block, which would either turn the cat a little to the right, or a little to the left. This block is
+    also shown in the image.
+- ### Event Blocks
+  - ![A block that allows the program to start.](/catmove/flagstart.png)
+    If you clicked the green flag to start the program, it won't work. We need an event block at the start to detect us clicking the green flag. Once we add it to the top of
+    everything else and click the green flag, the cat will move.
+- ### Event Blocks Continued
+  - ![An orange block that initiates action on pressing the space bar.](/catmove/spacepressed.png)
+    Another option for starting the game is with the block shown, called "when space key pressed." This means that when you press the spacebar on your keyboard,
+    the blocks you've made will start and do their assigned work!
+- ### Control Blocks
+  - ![A block that allows a 1 second delay.](/catmove/wait.png)
+    There are also blocks called control blocks, and you can use them to control things about your cat. For example, in the block shown called "wait 1 seconds,"
+    your cat will wait a second before doing the next action.
+- ### Repeat
+  - ![A block that repeats the code inside it.](/catmove/repeat10.png)
+    We want this cat to walk farther than it does right now. We should add a "repeat block" to make the cat walk 10 steps 10 more times for a total of 100 steps.
+- ### Forever
+  - ![A block that repeats forever.](/catmove/repeatforever.png)
+    Now we want this to run forever, so we put everything into the "forever block".
+
+## Final Product
+
+<Iframe url="https://scratch.mit.edu/projects/421054540/embed"
+        width="485px"
+        height="402px"
+        id="game"
+        className="game"
+        display="initial"
+        />
+
+</LessonTiles>
+
+<ContactTile
+  id="contact"
+  name="contact"
+>
+
+- <a><FaInstagram/></a>
+- <a><FaFacebook/></a>
+- <a><FiMail/></a>
+
+###### Built by Fragaria Webdev
+
+</ContactTile>
+
+</Container>

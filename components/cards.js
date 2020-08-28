@@ -220,7 +220,7 @@ export const LessonTiles = props => (
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'start',
-            textAlign: 'left'
+            textAlign: 'center'
           },
           minHeight: '100%',
           mx: [1, 2, 3],
