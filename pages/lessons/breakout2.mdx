@@ -1,0 +1,86 @@
+import { Container, Image } from 'theme-ui'
+import { HeaderTile, LessonTiles, ContactTile } from '../../components/cards'
+import {FaInstagram, FaFacebook} from 'react-icons/fa'
+import {FiMail} from 'react-icons/fi'
+import Iframe from 'react-iframe'
+
+<Container sx={{
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    maxWidth: '100%'
+}}>
+
+<HeaderTile 
+  title="CCSM Coding" 
+  subdivisions={["about", "lessons", "contact"]}
+  sdcolor = "black"
+/>
+
+<LessonTiles
+  id="lessons"
+  name="lessons"
+>
+
+## Making an Atari Breakout Game in Scratch: Part 2
+
+Two weeks ago, you learned how to make the prototype of the famous Atari Breakout game on Scratch. This week, we'll make this protype a little closer to the real thing.
+
+Try the actual game here: [Atari Breakout](https://elgoog.im/breakout/)
+
+## Code for the Ball:
+
+- ### Bouncing off the Blocks
+  - ![A block that bounces the ball off of the blocks](/breakout2/bounceback.png)
+    This block simply turns the direction of the ball to the opposite direction (in our case, downwards) and sends it off at a certain angle based on the angle
+    in which you hit the block with.
+
+- ### Hiding the Blocks
+  - ![A block that hides the blocks upon collision](/breakout2/hideblock.png)
+    When the ball hits / touches a block, the block will disappear with the "hide" command! One detail to note is the "wait" block: waiting 0.01 seconds will make sure
+    that the ball bounces back before the block disappears or hides.
+
+- ### Score
+  - ![A block that increases your score accordingly](/breakout2/bouncebackwithscore.png)
+    Whenever your ball hits a block, you score a point! There is no limit to how many points you can score.402px
+
+- ### Game Over
+  - ![A block that increases your score accordingly](/breakout2/gameover.png)
+  If your ball hits the red line / bottom of the screen, you lose!
+
+## Code for the Paddle:
+
+- ### Moving
+  - ![A block that allows the paddle to move](/breakout/moving.png)
+    This block tracks you mouse's position, and moves the paddle there. This way, you can control the motion of the paddle by dragging
+    your mouse across the game screen. As you can see in the image, the "set x to mouse x block" is repeated forever (until the game finishes, of course),
+    so you will be able to constantly move your mouse and the paddle will follow with little to no delay.
+
+## Youtube Tutorial
+
+## Final Product
+
+<Iframe url="https://scratch.mit.edu/projects/422833210/embed"
+        width="485px"
+        height="402px"
+        id="game"
+        className="game"
+        display="initial"
+        />
+      
+</LessonTiles>
+
+<ContactTile
+  id="contact"
+  name="contact"
+>
+
+- <a><FaInstagram/></a>
+- <a><FaFacebook/></a>
+- <a><FiMail/></a>
+
+###### Built by Fragaria Webdev
+
+</ContactTile>
+
+</Container>
