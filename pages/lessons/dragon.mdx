@@ -1,0 +1,61 @@
+import { Container, Image } from 'theme-ui'
+import { HeaderTile, LessonTiles, ContactTile } from '../../components/cards'
+import {FaInstagram, FaFacebook} from 'react-icons/fa'
+import {FiMail} from 'react-icons/fi'
+import Iframe from 'react-iframe'
+import {YoutubeCard} from '../../components/youtubecard'
+
+<Container sx={{
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    maxWidth: '100%'
+}}>
+
+<HeaderTile 
+  title="CCSM Coding" 
+  subdivisions={["about", "lessons", "contact"]}
+  sdcolor = "black"
+/>
+
+<LessonTiles
+  id="lessons"
+  name="lessons"
+>
+
+## Making Your Own Pet Dragon
+
+In this lesson, you will learn how to make your own pet dragon! You'll also teach it how to move and fly.
+
+## Videos
+
+<YoutubeCard videoId="5t2qDBoDAbc"/>
+<YoutubeCard videoId="9A163Wg3rVI"/>
+<YoutubeCard videoId="PSPYqhv7Ug4"/>
+
+## Final Product
+
+<Iframe url="https://scratch.mit.edu/projects/429592282/embed"
+        width="485px"
+        height="402px"
+        id="game"
+        className="game"
+        display="initial"
+        />
+      
+</LessonTiles>
+
+<ContactTile
+  id="contact"
+  name="contact"
+>
+
+- <a><FaInstagram/></a>
+- <a><FaFacebook/></a>
+- <a><FiMail/></a>
+
+###### Built by Fragaria Webdev
+
+</ContactTile>
+
+</Container>
