@@ -1,0 +1,78 @@
+import { Container, Image } from 'theme-ui'
+import { HeaderTile, LessonTiles, ContactTile } from '../../components/cards'
+import {FaInstagram, FaFacebook} from 'react-icons/fa'
+import {FiMail} from 'react-icons/fi'
+import Iframe from 'react-iframe'
+
+<Container sx={{
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    maxWidth: '100%'
+}}>
+
+<HeaderTile 
+  title="CCSM Coding" 
+  subdivisions={["about", "lessons", "contact"]}
+  sdcolor = "black"
+/>
+
+<LessonTiles
+  id="lessons"
+  name="lessons"
+>
+
+## Making an Atari Breakout Game in Scratch
+
+In this lesson, you will learn how to make the prototype of the famous Atari Breakout game on Scratch using stuff we've learned last week!
+
+Try the actual game here: [Atari Breakout](https://elgoog.im/breakout/)
+
+## Code for the Ball:
+
+- ### Touching Edge
+  - ![A block that detects collision between the ball and the board](/breakout/touchingedge.png)
+    This block checks for whether the ball is touching the board! When the user moves the board over to touch the ball, the boing sound will play and the basketball will move back up. A random angle at which the ball bounces off makes the game much harder.
+- ### Speed
+  - ![A block that causes the ball to move](/breakout/speed.png)
+    This block of code determines the speed the ball moves in with the “move ___ steps” command. This repeats forever (until stopped by the block of code that controls death), which means the ball continues moving at the same speed until you lose. The edge bounce mechanic is also put in here, meaning that the ball will bounce off the edges of the screen.
+- ### Game Over
+  - ![A block that ends the game if you lose](/breakout/gameover.png)
+    This block of code first places the ball at the coordinates (13,157) to start the game. Then, this code constantly detects for the lose condition, which is the ball touching the bottom red line. When this happens, all motion and code is stopped, and the game is over.
+
+## Code for the Paddle:
+
+- ### Moving
+  - ![A block that allows the paddle to move](/breakout/moving.png)
+    This block tracks you mouse's position, and moves the paddle there. This way, you can control the motion of the paddle by dragging
+    your mouse across the game screen. As you can see in the image, the "set x to mouse x block" is repeated forever (until the game finishes, of course),
+    so you will be able to constantly move your mouse and the paddle will follow with little to no delay.
+
+## Youtube Tutorial
+
+## Final Product
+
+<Iframe url="https://scratch.mit.edu/projects/422833210/embed"
+        width="485px"
+        height="402px"
+        id="game"
+        className="game"
+        display="initial"
+        />
+      
+</LessonTiles>
+
+<ContactTile
+  id="contact"
+  name="contact"
+>
+
+- <a><FaInstagram/></a>
+- <a><FaFacebook/></a>
+- <a><FiMail/></a>
+
+###### Built by Fragaria Webdev
+
+</ContactTile>
+
+</Container>
